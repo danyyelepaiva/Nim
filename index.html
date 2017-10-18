@@ -3,26 +3,28 @@
 <head>
   <link href="./style.css" type="text/css" rel="stylesheet">
   <script src="script.js"></script>
+  <meta charset="utf-8">
   <title> Nim </title>
   <h1> Nim </h1>
 </head>
 <body>
-<div class="top">
-<table cellpadding="0px" cellspacing="0px" id="bar">
-  <tr>
-    <td>
-      <a href="#"> HOME</a>
-    </td>
-    </td>
-    <a href="#"> RULES </a>
-    </td>
-    <td>
-      <a href="#"> RANKING </a>
-    </td>
-    <td>
-      <a href="#"> LOGIN </a>
-    </td>
-
+  <div id="top">
+    <table cellpadding="0px" cellspacing="0px" id="bar">
+      <tr>
+        <td>
+          <a href="#"> HOME</a>
+        </td>
+        <td>
+          <a href="#"> RULES </a>
+        </td>
+        <td>
+          <a href="#"> RANKING </a>
+        </td>
+        <td>
+          <a href="#"> LOGIN </a>
+        </td>
+      </tr>
+    </table>
   </div>
 
   <div id="login">
@@ -32,32 +34,44 @@
       <br>
       Password: <br>
       <input type="password">
+      <br>
       <input type="button" value="Submit" onclick="hide_login()">
     </form>
   </div>
 <!-- this is a comment -->
 
 
-<div id="menu">
-    <div>
-      <a> asd</a>
+  <form id="menu">
+      <div>
+        <a>Tamanho do Tabuleiro:</a>
+        <br>
+        <select>
+          <option> 2 </option>
+          <option> 3 </option>
+          <option> 4 </option>
+        </select>
+        <br>
+      </div>
+
+      <div>
+        <a>Primeiro a Jogar:</a><br>
+        <select>
+          <option> Jogador</option>
+          <option> Adversario</option>
+        </select>
+      </div>
+
+      <div>
+        <a> Dificuldade: </a><br>
+        <select>
+          <option> Fácil</option>
+          <option> Médio</option>
+          <option> Difícil</option>
+        </select>
+      </div>
       <br>
-      <select size=1>
-        <option> 2 </option>
-        <option> 3 </option>
-        <option> 4 </option>
-      </select>
-    </div>
-
-    <div>
-      <a>Primeiro a Jogar:</a><br>
-      <select>
-        <option> Jogador</option>
-        <option> Adversario</option>
-      </select>
-    </div>
-
-</div>
+      <input type="button" value="Submit" onclick="start()">
+    </form>
 
 
 
@@ -78,6 +92,6 @@
 
 
 
-<div class="regra">helper</div>
+<!--<div class="regra">helper</div>-->
 </body>
 </html>

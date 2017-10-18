@@ -18,22 +18,26 @@ table, th, td{
   border-collapse: collapse;
   text-align: center;
 }
+
 th, td{
   width: 100px;
   height: 100px;
 }
 
+
+#login{
+  text-align: center;
+}
+
 #menu{
   text-align: center;
-  padding-left: 10px;
+}
+
+#top{
 }
 
 .regra{
   float: right;
-}
-
-#login{
-  text-align: center;
 }
 
 .key {
