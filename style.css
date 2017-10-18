@@ -1,0 +1,47 @@
+body{
+  background: black;
+  color: white;
+}
+
+h1{
+    font-size: 50pt;
+    text-align: center;
+    color: lightblue;
+    text-shadow:  -1px 0 red, 0 1px white, 1px 0 blue, 0 -1px purple;
+}
+
+table, th, td{
+  font-family: fantasy;
+  font-size: 150%;
+  border-color: white;
+  border: solid;
+  border-collapse: collapse;
+  text-align: center;
+}
+th, td{
+  width: 100px;
+  height: 100px;
+}
+
+#menu{
+  padding-left: 10px;
+}
+
+.regra{
+  float: right;
+}
+
+#login{
+  text-align: center;
+}
+
+.key {
+  display: inline-block;
+  border-width: 2px;
+   margin-bottom: 4px;
+   border-style: outset;
+   text-align: center;
+   line-height: 40px;
+   background: rgb(150,150,255);
+  color: darkblue;
+}
