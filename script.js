@@ -1,3 +1,9 @@
+window.onload = function(){
+
+	hide("menu");
+	hide("table");
+}
+
 function hide(eid){
 	document.getElementById(eid).style.display = 'none';
 }
@@ -10,8 +16,8 @@ function hide_login() {
 	//hide("top");
 	//if (esconde) hide("jogo");
 	//else show("jogo");
-	//show("juntar");
 	hide("login");
+	show("menu");
 	// if(modojogo==1) hide("bsair");
 	// return false;
 }
