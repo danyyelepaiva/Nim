@@ -1,7 +1,12 @@
+var difRadio="medio";
+//var tabSize = document.getElementById("tamanho");
+
 window.onload = function(){
 
 	hide("menu");
-	hide("table");
+	hide("table1");
+	hide("table2");
+	hide("table3");
 	hide("top");
 };
 
@@ -19,14 +24,27 @@ function hide_login() {
 	//else show("jogo");
 	show("menu");
 	hide("login");
+	medio();
 	// if(modojogo==1) hide("bsair");
 	// return false;
 }
 
 function startGame(){
 	hide("menu");
-	show("table");
 	show("top");
+
+	switch(tabSize){
+		case "peq":
+			show("table1");
+			break;
+		case "med":
+			show("table2");
+			break;
+		case "grnd":
+			show("table3");
+			break;
+	}
+
 	switch(difRadio) {
     case "facil":
         alert("Fácil");
@@ -43,7 +61,6 @@ function startGame(){
 }
 
 //--------dificuldade-----
-var difRadio="medio";
 function facil(){
 	difRadio="facil";
 }
