@@ -3,7 +3,7 @@ window.onload = function(){
 	hide("menu");
 	hide("table");
 	hide("top");
-}
+};
 
 function hide(eid){
 	document.getElementById(eid).style.display = 'none';
@@ -23,8 +23,33 @@ function hide_login() {
 	// return false;
 }
 
-function start(){
+function startGame(){
 	hide("menu");
 	show("table");
 	show("top");
+	switch(difRadio) {
+    case "facil":
+        alert("Fácil");
+    		break;
+		case "medio":
+				//-----------
+				break;
+		case "dificil":
+				//------------
+				break;
+    default:
+				alert("ERRO")
+	}
+}
+
+//--------dificuldade-----
+var difRadio="medio";
+function facil(){
+	difRadio="facil";
+}
+function medio(){
+	difRadio="medio";
+}
+function dificil(){
+	difRadio="dificil";
 }
