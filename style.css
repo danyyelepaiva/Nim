@@ -37,17 +37,14 @@ th, td{
 
 }
 
-.regra{
-  float: right;
+.tabela{
+  
 }
 
-.key {
-  display: inline-block;
-  border-width: 2px;
-   margin-bottom: 4px;
-   border-style: outset;
-   text-align: center;
-   line-height: 40px;
-   background: rgb(150,150,255);
-  color: darkblue;
+.coluna{
+
+}
+
+.peca{
+
 }
