@@ -1,5 +1,5 @@
 var difRadio="medio";
-//var tabSize = document.getElementById("tamanho");
+var tabSize;
 
 window.onload = function(){
 
@@ -19,14 +19,10 @@ function show(eid){
 }
 
 function hide_login() {
-	//hide("top");
-	//if (esconde) hide("jogo");
-	//else show("jogo");
 	show("menu");
 	hide("login");
-	medio();
-	// if(modojogo==1) hide("bsair");
-	// return false;
+	difRadio= "medio";
+	tabSize = "med";
 }
 
 function startGame(){
@@ -58,15 +54,4 @@ function startGame(){
     default:
 				alert("ERRO")
 	}
-}
-
-//--------dificuldade-----
-function facil(){
-	difRadio="facil";
-}
-function medio(){
-	difRadio="medio";
-}
-function dificil(){
-	difRadio="dificil";
 }

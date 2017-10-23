@@ -45,7 +45,7 @@
     Dimensao do tabuleiro:
     <select size=1 name=tamanho class="dropdown">
       <option onclick="tabSize = 'peq'"> Pequeno </option>
-      <option onclick="tabSize = 'med'"> Médio </option>
+      <option onclick="tabSize = 'med'" selected="selected"> Médio </option>
       <option onclick="tabSize = 'grnd'"> Grande </option>
     </select>
 
@@ -53,10 +53,8 @@
 <br>
 
     Primeiro a jogar: <br>
-    <input type="radio" name="first" id="pc">
-    <label for="pc"> Computador </label>
-    <input type="radio" name="first" id="h">
-    <label for="h"> Eu </label>
+    <input type="radio" name="first"> Computador </input>
+    <input type="radio" name="first"> Eu </input>
 
     <br>
     <br>
@@ -69,9 +67,9 @@
     <br>
 
     Escolher Dificuldade: <br>
-    <input onclick="facil()" type="radio" name="d"> Facil </input>
-    <input onclick="medio()" type="radio" name="d" checked> Medio </input>
-    <input onclick="dificil()" type="radio" name="d"> Dificil </input>
+    <input onclick="difRadio='facil';" type="radio" name="d"> Facil </input>
+    <input onclick="difRadio='medio';" type="radio" name="d" checked> Medio </input>
+    <input onclick="difRadio='dificil';" type="radio" name="d"> Dificil </input>
 
     <br>
 
@@ -159,7 +157,7 @@
     </div>
     <div id="peca">*
     </div>
-  </div>    
+  </div>
   <div id="coluna" style="float:left;">
     <div id="peca">*
     </div>
