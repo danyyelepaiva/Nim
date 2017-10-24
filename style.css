@@ -33,12 +33,12 @@ th, td{
   text-align: center;
 }
 
-#top{
-
+.top{
+  color: red;
 }
 
 .tabela{
-  
+  padding-left: 13.5cm;
 }
 
 .coluna{
@@ -46,5 +46,10 @@ th, td{
 }
 
 .peca{
-
+  width: 2cm;
+  height: 2cm;
+  background-color: purple;
+  border: solid;
+  border-width: thick;
+  border-color: black;
 }
