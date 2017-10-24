@@ -26,26 +26,35 @@ th, td{
 
 
 #login{
+  /*primeiro menu*/
   text-align: center;
 }
 
 #menu{
+  /*menu das opcoes iniciais*/
   text-align: center;
 }
 
-.top{
+#top{
+  /*menu durante o jogo*/
   color: red;
 }
 
+.bar{
+  /*menu durante o jogo*/
+}
+
 .tabela{
+  /*toda a tabela do jogo*/
   padding-left: 13.5cm;
 }
 
 .coluna{
-
+  /*coluna do jogo*/
 }
 
-.peca{
+#peca{
+  /*cada peca do jogo*/
   width: 2cm;
   height: 2cm;
   background-color: purple;

@@ -2,7 +2,6 @@ var difRadio="medio";
 var tabSize;
 
 window.onload = function(){
-
 	hide("menu");
 	hide("table1");
 	hide("table2");
@@ -18,6 +17,7 @@ function show(eid){
 	document.getElementById(eid).style.display = 'inherit';
 }
 
+
 function hide_login() {
 	show("menu");
 	hide("login");
@@ -25,7 +25,13 @@ function hide_login() {
 	tabSize = "med";
 }
 
+function peca(){
+	/*nao funciona*/
+	document.getElementById('peca').style.backgroundColor = "red";
+}
+
 function startGame(){
+
 	hide("menu");
 	show("top");
 
@@ -54,4 +60,6 @@ function startGame(){
     default:
 				alert("ERRO")
 	}
+
+
 }
