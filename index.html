@@ -1,152 +1,155 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
   <link href="./style.css" type="text/css" rel="stylesheet">
   <script src="script.js"></script>
   <meta charset="utf-8">
   <title> Nim </title>
   <h1> Nim </h1>
-</head>
-<body>
-  <div id="top">
-    <table class="bar">
-      <tr>
-        <td>
-          <a href="#"> HOME</a>
-        </td>
-        <td>
-          <a href="#"> RULES </a>
-        </td>
-        <td>
-          <a href="#"> RANKING </a>
-        </td>
-        <td>
-          <a href="#"> LOGIN </a>
-        </td>
-      </tr>
-    </table>
-  </div>
+  </head>
+  <body>
+    <div id="tudo">
+      <div id="top">
+        <table class="bar">
+          <tr>
+            <td>
+              <a href="#"> LOGIN</a>
+            </td>
+            <td>
+              <a href="#"> SETTINGS </a>
+            </td>
+            <td>
+              <a href="#"> REGRAS </a>
+            </td>
+            <td>
+              <a href="#"> RANKING </a>
+            </td>
+          </tr>
+        </table>
+      </div>
 
-  <div id="login">
-    <form>
-      Nome de Utilizador:<br>
-      <input type="text" >
+      <div id="login">
+        <form>
+          Nome de Utilizador:<br>
+          <input type="text" >
+          <br>
+          Password: <br>
+          <input type="password">
+          <br>
+          <input type="button" value="Submeter" onclick="hide_login()">
+        </form>
+      </div>
+    <!-- this is a comment -->
+
+
+        <div id="menu">
+        Dimensao do tabuleiro:
+        <select size=1 name=tamanho class="dropdown">
+          <option onclick="tabSize = 'peq'"> Pequeno </option>
+          <option onclick="tabSize = 'med'" selected="selected"> Médio </option>
+          <option onclick="tabSize = 'grnd'"> Grande </option>
+        </select>
+
       <br>
-      Password: <br>
-      <input type="password">
       <br>
-      <input type="button" value="Submit" onclick="hide_login()">
-    </form>
-  </div>
-<!-- this is a comment -->
 
+        Primeiro a jogar: <br>
+        <input type="radio" name="first"> Computador </input>
+        <input type="radio" name="first"> Eu </input>
 
-    <div id="menu">
-    Dimensao do tabuleiro:
-    <select size=1 name=tamanho class="dropdown">
-      <option onclick="tabSize = 'peq'"> Pequeno </option>
-      <option onclick="tabSize = 'med'" selected="selected"> Médio </option>
-      <option onclick="tabSize = 'grnd'"> Grande </option>
-    </select>
+        <br>
+        <br>
 
-<br>
-<br>
+        Escolher Oponente: (ainda não implementado) <br>
+        <input type="radio" name="op"> Computador </input>
+        <input type="radio" name="op"> Outro Jogador </input>
 
-    Primeiro a jogar: <br>
-    <input type="radio" name="first"> Computador </input>
-    <input type="radio" name="first"> Eu </input>
+        <br>
+        <br>
 
-    <br>
-    <br>
+        Escolher Dificuldade: <br>
+        <input onclick="difRadio='facil';" type="radio" name="d"> Facil </input>
+        <input onclick="difRadio='medio';" type="radio" name="d" checked> Medio </input>
+        <input onclick="difRadio='dificil';" type="radio" name="d"> Dificil </input>
 
-    Escolher Oponente: (ainda não implementado) <br>
-    <input type="radio" name="op"> Computador </input>
-    <input type="radio" name="op"> Outro Jogador </input>
+        <br>
 
-    <br>
-    <br>
-
-    Escolher Dificuldade: <br>
-    <input onclick="difRadio='facil';" type="radio" name="d"> Facil </input>
-    <input onclick="difRadio='medio';" type="radio" name="d" checked> Medio </input>
-    <input onclick="difRadio='dificil';" type="radio" name="d"> Dificil </input>
-
-    <br>
-
-    <input onclick="startGame()" type="submit" value="Submeter">
-  </div>
+        <input onclick="startGame()" type="submit" value="Submeter">
+      </div>
 
 
 
 
 
-
-<div id="table1" class="tabela" style="float:left;">
-  <div class="coluna" style="float:left;">
-    <div id="peca" onclick="peca();"></div>
-  </div>
-  <div class="coluna" style="float:left;">
-    <div id="peca" onclick="peca();"></div>
-    <div id="peca" onclick="peca();"></div>
-  </div>
-  <div class="coluna" style="float:left;">
-    <div id="peca" onclick="peca();"></div>
-    <div id="peca" onclick="peca();"></div>
-    <div id="peca" onclick="peca();"></div>
-  </div>
-</div>
-
-
-
-<div id="table2" class="tabela" style="float:left;">
-  <div class="coluna" style="float:left;">
-    <div id="peca" onclick="peca();" onclick="peca()"></div>
-  </div>
-  <div class="coluna" style="float:left;">
-    <div id="peca" onclick="peca();"></div>
-    <div id="peca" onclick="peca();"></div>
-    <div id="peca" onclick="peca();"></div>
-  </div>
-  <div class="coluna" style="float:left;">
-    <div id="peca" onclick="peca();"></div>
-    <div id="peca" onclick="peca();"></div>
-    <div id="peca" onclick="peca();"></div>
-    <div id="peca" onclick="peca();"></div>
-    <div id="peca" onclick="peca();"></div>
-  </div>
-</div>
+      <div id="game">
+       <div id="table1" class="tabela" style="float:left;">
+        <div class="coluna" style="float:left;">
+          <div id="peca" onclick="peca();"></div>
+        </div>
+        <div class="coluna" style="float:left;">
+          <div id="peca" onclick="peca();"></div>
+          <div id="peca" onclick="peca();"></div>
+        </div>
+        <div class="coluna" style="float:left;">
+          <div id="peca" onclick="peca();"></div>
+          <div id="peca" onclick="peca();"></div>
+          <div id="peca" onclick="peca();"></div>
+        </div>
+        </div>
 
 
 
-<div id="table3" class="tabela" style="float:left;">
-  <div class="coluna" style="float:left;">
-    <div id="peca" onclick="peca();"></div>
-  </div>
-  <div class="coluna" style="float:left;">
-    <div id="peca" onclick="peca();"></div>
-    <div id="peca" onclick="peca();"></div>
-  </div>
-  <div class="coluna" style="float:left;">
-    <div id="peca" onclick="peca();"></div>
-    <div id="peca" onclick="peca();"></div>
-    <div id="peca" onclick="peca();"></div>
-  </div>
-  <div class="coluna" style="float:left;">
-    <div id="peca" onclick="peca();"></div>
-    <div id="peca" onclick="peca();"></div>
-    <div id="peca" onclick="peca();"></div>
-    <div id="peca" onclick="peca();"></div>
-  </div>
-  <div class="coluna" style="float:left;">
-    <div id="peca" onclick="peca();"></div>
-    <div id="peca" onclick="peca();"></div>
-    <div id="peca" onclick="peca();"></div>
-    <div id="peca" onclick="peca();"></div>
-    <div id="peca" onclick="peca();"></div>
-  </div>
-</div>
+        <div id="table2" class="tabela" style="float:left;">
+        <div class="coluna" style="float:left;">
+          <div id="peca" onclick="peca();" onclick="peca()"></div>
+        </div>
+        <div class="coluna" style="float:left;">
+          <div id="peca" onclick="peca();"></div>
+          <div id="peca" onclick="peca();"></div>
+          <div id="peca" onclick="peca();"></div>
+        </div>
+        <div class="coluna" style="float:left;">
+          <div id="peca" onclick="peca();"></div>
+          <div id="peca" onclick="peca();"></div>
+          <div id="peca" onclick="peca();"></div>
+          <div id="peca" onclick="peca();"></div>
+          <div id="peca" onclick="peca();"></div>
+        </div>
+        </div>
 
 
-<!--<div class="regra">helper</div>-->
-</body>
+
+        <div id="table3" class="tabela" style="float:left;">
+        <div class="coluna" style="float:left;">
+          <div id="peca" onclick="peca();"></div>
+        </div>
+        <div class="coluna" style="float:left;">
+          <div id="peca" onclick="peca();"></div>
+          <div id="peca" onclick="peca();"></div>
+        </div>
+        <div class="coluna" style="float:left;">
+          <div id="peca" onclick="peca();"></div>
+          <div id="peca" onclick="peca();"></div>
+          <div id="peca" onclick="peca();"></div>
+        </div>
+        <div class="coluna" style="float:left;">
+          <div id="peca" onclick="peca();"></div>
+          <div id="peca" onclick="peca();"></div>
+          <div id="peca" onclick="peca();"></div>
+          <div id="peca" onclick="peca();"></div>
+        </div>
+        <div class="coluna" style="float:left;">
+          <div id="peca" onclick="peca();"></div>
+          <div id="peca" onclick="peca();"></div>
+          <div id="peca" onclick="peca();"></div>
+          <div id="peca" onclick="peca();"></div>
+          <div id="peca" onclick="peca();"></div>
+        </div>
+        </div>
+      </div>
+
+
+      <!--<div class="regra">helper</div>-->
+    </div>
+  </body>
 </html>
