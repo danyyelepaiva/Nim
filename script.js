@@ -1,5 +1,9 @@
 var difRadio="medio";
+var primeiro="eu";
+var secPlayer="com";
 var tabSize;
+var nomeJogador;
+var password;
 
 window.onload = function(){
 	hide("menu");
@@ -19,6 +23,8 @@ function show(eid){
 
 
 function hide_login() {
+ 	nomeJogador = document.getElementById("nomeJogador").value.toString();
+	password = document.getElementById("pwrd").value.toString();
 	show("menu");
 	hide("login");
 	difRadio= "medio";
@@ -26,8 +32,8 @@ function hide_login() {
 }
 
 function peca(){
-	/*nao funciona*/
-	document.getElementById('peca').style.backgroundColor = "red";
+	var x = document.getElementById("peca");
+	x.style.backgroundColor = 'red';
 }
 
 function startGame(){

@@ -30,10 +30,10 @@
   <div id="login">
     <form>
       Nome de Utilizador:<br>
-      <input type="text" >
+      <input type="text" id="nomeJogador">
       <br>
       Password: <br>
-      <input type="password">
+      <input type="password" id="pwrd">
       <br>
       <input type="button" value="Submit" onclick="hide_login()">
     </form>
@@ -54,13 +54,13 @@
 
     Primeiro a jogar: <br>
     <input type="radio" name="first"> Computador </input>
-    <input type="radio" name="first"> Eu </input>
+    <input type="radio" name="first" checked> Eu </input>
 
     <br>
     <br>
 
     Escolher Oponente: (ainda não implementado) <br>
-    <input type="radio" name="op"> Computador </input>
+    <input type="radio" name="op"checked> Computador </input>
     <input type="radio" name="op"> Outro Jogador </input>
 
     <br>
@@ -100,7 +100,7 @@
 
 <div id="table2" class="tabela" style="float:left;">
   <div class="coluna" style="float:left;">
-    <div id="peca" onclick="peca();" onclick="peca()"></div>
+    <div id="peca" onclick="peca();"></div>
   </div>
   <div class="coluna" style="float:left;">
     <div id="peca" onclick="peca();"></div>
