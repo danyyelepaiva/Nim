@@ -6,8 +6,8 @@ body {
 h1{
     font-size: 50pt;
     text-align: center;
-    color: lightblue;
-    text-shadow:  -1px 0 red, 0 1px white, 1px 0 blue, 0 -1px purple;
+    color: lightgreen;
+    text-shadow:  -1px 0 yellow, 0 2px white, 2px 0 green, 0 -1px orange;
 }
 
 table, tr, td{
@@ -46,7 +46,7 @@ td{
 
 .tabela{
   /*toda a tabela do jogo*/
-  padding-left: 13.5cm;
+  padding-left: 42%;
 }
 
 .coluna{
@@ -58,7 +58,7 @@ button{
   width: 2cm;
   height: 2cm;
   color: black;
-  background-color: purple;
+  background-color: darkgreen;
   border: solid;
   border-width: thick;
   border-color: black;
