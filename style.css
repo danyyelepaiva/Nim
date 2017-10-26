@@ -19,6 +19,10 @@ table, tr, td{
   text-align: center;
 }
 
+td{
+  width: 30%;
+}
+
 #login{
   /* primeiro menu */
   text-align: center;
@@ -33,6 +37,7 @@ table, tr, td{
   /*menu durante o jogo*/
   border: solid;
   color: green;
+  width: 100%;
 }
 
 .bar{
@@ -47,6 +52,17 @@ table, tr, td{
 .coluna{
   /*coluna do jogo*/
   float: left;
+}
+
+button{
+  width: 2cm;
+  height: 2cm;
+  color: black;
+  background-color: purple;
+  border: solid;
+  border-width: thick;
+  border-color: black;
+
 }
 
 #peca{

@@ -47,6 +47,7 @@ function tableMaker(tam){
   document.body.appendChild(tabela);
   var coluna;
   var peca;
+  var interval;
 
   switch(tam){
     case 1:
@@ -55,9 +56,11 @@ function tableMaker(tam){
         coluna.setAttribute("class", "coluna");
         tabela.appendChild(coluna);
         for(j=0; j<i+1; j++){
-          peca = document.createElement("div");
+          peca = document.createElement("button");
           peca.setAttribute("id","peca");
+          interval = document.createElement("br");
           coluna.appendChild(peca);
+          coluna.appendChild(interval);
         }
       }
       break;
@@ -68,9 +71,11 @@ function tableMaker(tam){
         coluna.setAttribute("class", "coluna");
         tabela.appendChild(coluna);
         for(j=0; j<(i*2)-1; j++){
-          peca = document.createElement("div");
-          peca.setAttribute("id","peca");
+          peca = document.createElement("button");
+          peca.setAttribute("id","peca"+i+j);/**/
+          interval = document.createElement("br");
           coluna.appendChild(peca);
+          coluna.appendChild(interval);
         }
       }
       break;
@@ -81,9 +86,11 @@ function tableMaker(tam){
         coluna.setAttribute("class", "coluna");
         tabela.appendChild(coluna);
         for(j=0; j<i+1; j++){
-          peca = document.createElement("div");
+          peca = document.createElement("button");
           peca.setAttribute("id","peca");
+          interval = document.createElement("br");
           coluna.appendChild(peca);
+          coluna.appendChild(interval);
         }
       }
       break;
