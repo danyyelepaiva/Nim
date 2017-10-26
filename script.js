@@ -57,8 +57,8 @@ function tableMaker(tam){
         tabela.appendChild(coluna);
         for(j=0; j<i+1; j++){
           peca = document.createElement("button");
-          peca.setAttribute("id","peca");
-          peca.setAttribute("onclick","peca();");/**/
+          peca.setAttribute("id","peca"+i+j);/**/
+          peca.setAttribute("onclick","peca("+i+","+j+");");/**/
           interval = document.createElement("br");
           coluna.appendChild(peca);
           coluna.appendChild(interval);
@@ -89,8 +89,8 @@ function tableMaker(tam){
         tabela.appendChild(coluna);
         for(j=0; j<i+1; j++){
           peca = document.createElement("button");
-          peca.setAttribute("id","peca");
-          peca.setAttribute("onclick","peca();");/**/
+          peca.setAttribute("id","peca"+i+j);/**/
+          peca.setAttribute("onclick","peca("+i+","+j+");");/**/
           interval = document.createElement("br");
           coluna.appendChild(peca);
           coluna.appendChild(interval);
