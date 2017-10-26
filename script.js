@@ -41,9 +41,16 @@ function startGame(){
 
 
 function tableMaker(tam){
+  var tabela = document.createElement("div");
+  tabela.setAttribute("class", "tabela");
+  document.body.appendChild(tabela);
   var coluna = document.createElement("div");
-  coluna.setAttribute("id", "peca");
-  document.body.appendChild(coluna);
+  coluna.setAttribute("class", "coluna");
+  tabela.appendChild(coluna);
+
+  var peca = document.createElement("div");
+  peca.setAttribute("id","peca");
+  coluna.appendChild(peca);
 
 
 }
