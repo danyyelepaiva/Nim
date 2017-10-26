@@ -1,9 +1,10 @@
 var difRadio="medio";
-var primeiro="eu";
+var primeiro=0;
 var secPlayer="com";
 var tabSize = 2;
 var nomeJogador;
 var password;
+var i=1;
 
 window.onload = function(){
   hide("top");
@@ -28,11 +29,19 @@ function hide_login() {
 }
 
 function peca(col,row){
-  document.getElementById("peca"+col+row).style.borderColor = 'red';
+    row2 = row;
+    while(document.getElementById("peca"+col+row2)){
+      document.getElementById("peca"+col+row2).style.backgroundColor = 'grey';
+      row2++;
+    }
+    primeiro++;
 }
 
 function setSize(tam){
   tabSize = tam;
+}
+function first(pr){
+  primeiro = pr;
 }
 
 function startGame(){
