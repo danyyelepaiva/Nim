@@ -6,66 +6,44 @@ var nomeJogador;
 var password;
 
 window.onload = function(){
-	hide("menu");
-	hide("table1");
-	hide("table2");
-	hide("table3");
-	hide("top");
+  hide("top");
+  hide("menu");
 };
 
 function hide(eid){
-	document.getElementById(eid).style.display = 'none';
+  document.getElementById(eid).style.display = 'none';
 }
 
 function show(eid){
-	document.getElementById(eid).style.display = 'inherit';
+  document.getElementById(eid).style.display = 'inherit';
 }
 
 
 function hide_login() {
- 	nomeJogador = document.getElementById("nomeJogador").value.toString();
-	password = document.getElementById("pwrd").value.toString();
-	show("menu");
-	hide("login");
-	difRadio= "medio";
-	tabSize = "med";
+  nomeJogador = document.getElementById("nomeJogador").value.toString();
+  password = document.getElementById("pwrd").value.toString();
+  show("menu");
+  hide("login");
+  difRadio= "medio";
+  tabSize = "med";
 }
 
 function peca(){
-	var x = document.getElementById("peca");
-	x.style.backgroundColor = 'red';
+
 }
 
 function startGame(){
+  hide("menu");
+  show("top");
+  tableMaker(tabSize);
 
-	hide("menu");
-	show("top");
+}
 
-	switch(tabSize){
-		case "peq":
-			show("table1");
-			break;
-		case "med":
-			show("table2");
-			break;
-		case "grnd":
-			show("table3");
-			break;
-	}
 
-	switch(difRadio) {
-    case "facil":
-        alert("Fácil");
-    		break;
-		case "medio":
-				//-----------
-				break;
-		case "dificil":
-				//------------
-				break;
-    default:
-				alert("ERRO")
-	}
+function tableMaker(tam){
+  var coluna = document.createElement("div");
+  coluna.setAttribute("id", "peca");
+  document.body.appendChild(coluna);
 
 
 }

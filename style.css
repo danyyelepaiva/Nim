@@ -1,4 +1,4 @@
-body{
+body {
   background: black;
   color: white;
 }
@@ -20,7 +20,7 @@ table, tr, td{
 }
 
 #login{
-  /*primeiro menu*/
+  /* primeiro menu */
   text-align: center;
 }
 
