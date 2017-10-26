@@ -45,55 +45,47 @@ function tableMaker(tam){
   var tabela = document.createElement("div");
   tabela.setAttribute("class", "tabela");
   document.body.appendChild(tabela);
-
+  var coluna;
+  var peca;
 
   switch(tam){
     case 1:
       for(i=0; i<3; i++){
-        var coluna = document.createElement("div");
+        coluna = document.createElement("div");
         coluna.setAttribute("class", "coluna");
         tabela.appendChild(coluna);
         for(j=0; j<i+1; j++){
-          var peca = document.createElement("button");
+          peca = document.createElement("div");
           peca.setAttribute("id","peca");
           coluna.appendChild(peca);
         }
       }
       break;
+
     case 2:
       for(i=1; i<=3; i++){
-        var coluna = document.createElement("div");
+        coluna = document.createElement("div");
         coluna.setAttribute("class", "coluna");
         tabela.appendChild(coluna);
         for(j=0; j<(i*2)-1; j++){
-          var peca = document.createElement("div");
+          peca = document.createElement("div");
           peca.setAttribute("id","peca");
           coluna.appendChild(peca);
         }
       }
       break;
+
     case 3:
       for(i=0; i<5; i++){
-        var coluna = document.createElement("div");
+        coluna = document.createElement("div");
         coluna.setAttribute("class", "coluna");
         tabela.appendChild(coluna);
         for(j=0; j<i+1; j++){
-          var peca = document.createElement("div");
+          peca = document.createElement("div");
           peca.setAttribute("id","peca");
           coluna.appendChild(peca);
         }
       }
       break;
   }
-
 }
-
-
-
-var coluna = document.createElement("div");
-coluna.setAttribute("class", "coluna");
-tabela.appendChild(coluna);
-
-var peca = document.createElement("div");
-peca.setAttribute("id","peca");
-coluna.appendChild(peca);
