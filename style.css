@@ -44,8 +44,9 @@ table, tr, td{
   padding-left: 13.5cm;
 }
 
-#coluna{
+.coluna{
   /*coluna do jogo*/
+  float: left;
 }
 
 #peca{

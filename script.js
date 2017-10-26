@@ -1,7 +1,7 @@
 var difRadio="medio";
 var primeiro="eu";
 var secPlayer="com";
-var tabSize;
+var tabSize = 2;
 var nomeJogador;
 var password;
 
@@ -25,32 +25,53 @@ function hide_login() {
   show("menu");
   hide("login");
   difRadio= "medio";
-  tabSize = "med";
 }
 
 function peca(){
 
 }
 
+function setSize(tam){
+  tabSize = tam;
+}
+
 function startGame(){
   hide("menu");
   show("top");
   tableMaker(tabSize);
-
 }
-
 
 function tableMaker(tam){
   var tabela = document.createElement("div");
   tabela.setAttribute("class", "tabela");
   document.body.appendChild(tabela);
-  var coluna = document.createElement("div");
-  coluna.setAttribute("class", "coluna");
-  tabela.appendChild(coluna);
 
-  var peca = document.createElement("div");
-  peca.setAttribute("id","peca");
-  coluna.appendChild(peca);
 
+  switch(tam){
+    case 2:
+      for(i=0; i<3; i++){
+        var coluna = document.createElement("div");
+        coluna.setAttribute("class", "coluna");
+        tabela.appendChild(coluna);
+        for(j=0; j<i+1; j++){
+          var peca = document.createElement("div");
+          peca.setAttribute("id","peca");
+          coluna.appendChild(peca);
+        }
+      }
+      break;
+    default:
+      break;
+  }
 
 }
+
+
+
+var coluna = document.createElement("div");
+coluna.setAttribute("class", "coluna");
+tabela.appendChild(coluna);
+
+var peca = document.createElement("div");
+peca.setAttribute("id","peca");
+coluna.appendChild(peca);
