@@ -27,8 +27,8 @@ function hide_login() {
   difRadio= "medio";
 }
 
-function peca(){
-
+function peca(col,row){
+  document.getElementById("peca"+col+row).style.borderColor = 'red';
 }
 
 function setSize(tam){
@@ -58,6 +58,7 @@ function tableMaker(tam){
         for(j=0; j<i+1; j++){
           peca = document.createElement("button");
           peca.setAttribute("id","peca");
+          peca.setAttribute("onclick","peca();");/**/
           interval = document.createElement("br");
           coluna.appendChild(peca);
           coluna.appendChild(interval);
@@ -73,6 +74,7 @@ function tableMaker(tam){
         for(j=0; j<(i*2)-1; j++){
           peca = document.createElement("button");
           peca.setAttribute("id","peca"+i+j);/**/
+          peca.setAttribute("onclick","peca("+i+","+j+");");/**/
           interval = document.createElement("br");
           coluna.appendChild(peca);
           coluna.appendChild(interval);
@@ -88,6 +90,7 @@ function tableMaker(tam){
         for(j=0; j<i+1; j++){
           peca = document.createElement("button");
           peca.setAttribute("id","peca");
+          peca.setAttribute("onclick","peca();");/**/
           interval = document.createElement("br");
           coluna.appendChild(peca);
           coluna.appendChild(interval);

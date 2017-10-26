@@ -67,11 +67,11 @@ button{
 
 #peca{
   /*cada peca do jogo*/
-  width: 2cm;
+  /*width: 2cm;
   height: 2cm;
   color: black;
   background-color: purple;
   border: solid;
   border-width: thick;
-  border-color: black;
+  border-color: black;*/
 }
