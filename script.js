@@ -30,6 +30,7 @@ function hide_login() {
   difRadio= "medio";
 }
 
+
 function gerente(){
 
 }
@@ -129,4 +130,65 @@ function tableMaker(tam){
       }
       break;
   }
+}
+
+for(var i = 0; i < 4; i++){
+  rankinglocal[i] = [];
+  var dif = rankinglocal[i];
+  for(var j = 0; j < 10; j++)
+    dif[j] = {nome: "",pontuacao: 0};
+}
+
+function loadrank(dif){
+  t = document.getElementById("ranking");
+    if(t != null)
+      t.parentNode.removeChild(t);
+
+    var c;
+    for(var r=0; r<3;r++){
+      c=rankinglocal[r];
+      for( q=0; q<10;q++){
+        if(r==0) str='b';
+        if(r==1) str='i';
+        if(r==2) str='a';
+        str=str+q;
+        var tp = localStorage.getItem(str);
+        var tp1= JSON.parse(tp);
+        c[q]=tp1;
+      }
+    }
+
+    var dificuldade = rankinglocar[dif];
+    var tbl= document.createElement('table');
+      tbl.setAttribute("id","ranking");
+      tbl.border="1";
+      var header = tbl.createTHead();
+      var row = header.insertRow(0);
+      var cell = row.insertCell(0);
+      cell.innerHTML = "Nome";
+      var cell = row.insertCell(1);
+      cell.innerHTML = "Pontuacao";
+
+      for (var i = 0; i < 10; i++) {
+        var tr = document.createElement('tr');
+        for (var j = 0; j < 3 ; j++){
+          var td = document.createElement('td');
+          if(dificuldade[i]!=null){
+            switch(j){
+              case 0: 
+                td.appendChild(document.createTextNode(dificuldade[i].name));
+                break;
+              case 1:
+                td.appendChild(document.createTextNode(dificuldade[i].score));
+                break;
+              case 2:
+                td.appendChild(document.createTextNode(dificuldade[i].time));
+                break;
+            }
+          }
+          tr.appendChild(td);
+        }
+        tbl.appendChild(tr);
+      }
+      document.getElementById("showrank").appendChild(tbl);
 }
