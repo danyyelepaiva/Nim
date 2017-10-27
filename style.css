@@ -10,6 +10,13 @@ h1 {
   text-shadow: -1px 0 yellow, 0 2px white, 2px 0 green, 0 -1px orange;
 }
 
+h4 {
+  font-size: 30pt;
+  text-align: center;
+  color: lightgreen;
+  text-shadow: -1px 0 yellow, 0 2px white, 2px 0 green, 0 -1px orange;
+}
+
 table,tr,td {
   font-family: fantasy;
   font-size: 50px;
@@ -45,7 +52,7 @@ td {
   position: relative;
   left: 100px;
     margin-top: 50px;
-    margin-bottom: 40px;  
+    margin-bottom: 40px;
     border-collapse: collapse;
     border-spacing: 0;
     width: 80%;
