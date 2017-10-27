@@ -3,58 +3,59 @@ body {
   color: white;
 }
 
-h1{
-    font-size: 50pt;
-    text-align: center;
-    color: lightgreen;
-    text-shadow:  -1px 0 yellow, 0 2px white, 2px 0 green, 0 -1px orange;
+h1 {
+  font-size: 50pt;
+  text-align: center;
+  color: lightgreen;
+  text-shadow: -1px 0 yellow, 0 2px white, 2px 0 green, 0 -1px orange;
 }
 
-table, tr, td{
+table,tr,td {
   font-family: fantasy;
   font-size: 50px;
   border-color: white;
   border: solid;
   border-collapse: collapse;
   text-align: center;
+
 }
 
-td{
-  width: 30%;
+td {
+  width: 50%;
 }
 
-#login{
-  /* primeiro menu */
+#login {
+  /* primeiro menu  */
   text-align: center;
 }
 
-#menu{
-  /*menu das opcoes iniciais*/
+#menu {
+  /* menu das opcoes iniciais */
   text-align: center;
 }
 
-#top{
-  /*menu durante o jogo*/
+#top {
+  /* menu durante o jogo */
   border: solid;
   color: green;
   width: 100%;
 }
 
-.bar{
-  /*menu durante o jogo*/
+.bar {
+  /* menu durante o jogo */
 }
 
-.tabela{
-  /*toda a tabela do jogo*/
+.tabela {
+  /* toda a tabela do jogo */
   padding-left: 42%;
 }
 
-.coluna{
-  /*coluna do jogo*/
+.coluna {
+  /* coluna do jogo */
   float: left;
 }
 
-button{
+button {
   width: 2cm;
   height: 2cm;
   color: black;
@@ -62,16 +63,15 @@ button{
   border: solid;
   border-width: thick;
   border-color: black;
-
 }
 
-#peca{
-  /*cada peca do jogo*/
-  /*width: 2cm;
+#peca {
+  /* cada peca do jogo */
+  /* width: 2cm;
   height: 2cm;
   color: black;
   background-color: purple;
   border: solid;
   border-width: thick;
-  border-color: black;*/
+  border-color: black; */
 }

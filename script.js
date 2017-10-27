@@ -1,7 +1,9 @@
-var difRadio="medio";
+var difRadio;
 var primeiro=0;
 var secPlayer="com";
 var tabSize = 2;
+var tabCol;
+var tabLin;
 var nomeJogador;
 var password;
 var i=1;
@@ -28,6 +30,34 @@ function hide_login() {
   difRadio= "medio";
 }
 
+function gerente(){
+    
+}
+
+function jogada(){
+  var coluna;
+  var linha;
+  switch(tabSize){
+    case 1:
+      tabCol=3;
+      tabLin = [1,2.3];
+      break;
+    case 2:
+      tabCol=3;
+      tabLin=[1,3,5];
+      break;
+    case 3:
+      tabCol=5;
+      tabLin=[1,2.3,4,5];
+      break;
+  }
+  coluna = Math.floor((Math.random()*tabCol)+1);
+  linha = Math.floor((Math.random()*tabLin[coluna])+1);
+  alert(coluna + " " + linha);
+  peca(coluna, linha);
+  primeiro=2;
+}
+
 function peca(col,row){
     row2 = row;
     if(document.getElementById("peca"+col+row2).style.backgroundColor != 'grey'){
@@ -35,7 +65,7 @@ function peca(col,row){
         document.getElementById("peca"+col+row2).style.backgroundColor = 'grey';
         row2++;
       }
-      primeiro++;
+      primeiro=1;
     }
 }
 
@@ -62,11 +92,11 @@ function tableMaker(tam){
 
   switch(tam){
     case 1:
-      for(i=0; i<3; i++){
+      for(i=1; i<=3; i++){
         coluna = document.createElement("div");
         coluna.setAttribute("class", "coluna");
         tabela.appendChild(coluna);
-        for(j=0; j<i+1; j++){
+        for(j=1; j<=i; j++){
           peca = document.createElement("button");
           peca.setAttribute("id","peca"+i+j);/**/
           peca.setAttribute("onclick","peca("+i+","+j+");");/**/
@@ -82,7 +112,7 @@ function tableMaker(tam){
         coluna = document.createElement("div");
         coluna.setAttribute("class", "coluna");
         tabela.appendChild(coluna);
-        for(j=0; j<(i*2)-1; j++){
+        for(j=1; j<=(i*2)-1; j++){
           peca = document.createElement("button");
           peca.setAttribute("id","peca"+i+j);/**/
           peca.setAttribute("onclick","peca("+i+","+j+");");/**/
@@ -94,11 +124,11 @@ function tableMaker(tam){
       break;
 
     case 3:
-      for(i=0; i<5; i++){
+      for(i=1; i<=5; i++){
         coluna = document.createElement("div");
         coluna.setAttribute("class", "coluna");
         tabela.appendChild(coluna);
-        for(j=0; j<i+1; j++){
+        for(j=1; j<=i; j++){
           peca = document.createElement("button");
           peca.setAttribute("id","peca"+i+j);/**/
           peca.setAttribute("onclick","peca("+i+","+j+");");/**/
