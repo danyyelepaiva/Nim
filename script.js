@@ -30,11 +30,13 @@ function hide_login() {
 
 function peca(col,row){
     row2 = row;
-    while(document.getElementById("peca"+col+row2)){
-      document.getElementById("peca"+col+row2).style.backgroundColor = 'grey';
-      row2++;
+    if(document.getElementById("peca"+col+row2).style.backgroundColor != 'grey'){
+      while(document.getElementById("peca"+col+row2)){
+        document.getElementById("peca"+col+row2).style.backgroundColor = 'grey';
+        row2++;
+      }
+      primeiro++;
     }
-    primeiro++;
 }
 
 function setSize(tam){
