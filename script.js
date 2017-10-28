@@ -3,7 +3,6 @@ var primeiro=0;
 var secPlayer="com";
 var tabSize = 2;
 var tabCol;
-var tabLin;
 var nomeJogador;
 var password;
 var i=1;
@@ -36,28 +35,40 @@ function gerente(){
 }
 
 function jogada(){
-  var coluna;
-  var linha;
-  switch(tabSize){
-    case 1:
-      break;
+  var coluna = Math.floor(Math.random()*(tabSize+3));
+  if(tabCol[coluna]==0){
+    coluna = 0;
+    while(tabCol[coluna]==0){
+      coluna++;
+    }
   }
-  coluna = Math.floor((Math.random()*tabCol)+1);
-  linha = Math.floor((Math.random()*tabLin[coluna])+1);
-  alert(coluna + " " + linha);
-  peca(coluna, linha);
+  var linha = Math.floor(Math.random()*tabCol[coluna-1]+1);
+  linha2 = linha;
+  while(document.getElementById("peca"+coluna+linha2)){
+    alert("peca"+coluna+linha2);
+    document.getElementById("peca"+coluna+linha2).style.backgroundColor = 'grey';
+    linha2++;
+    tabCol[coluna-1] = linha-1;
+  }
   primeiro=2;
 }
 
 function peca(col,row){
-    row2 = row;
-    if(document.getElementById("peca"+col+row2).style.backgroundColor != 'grey'){
-      while(document.getElementById("peca"+col+row2)){
-        document.getElementById("peca"+col+row2).style.backgroundColor = 'grey';
-        row2++;
-      }
-      primeiro=1;
+  row2 = row;
+  if(document.getElementById("peca"+col+row2).style.backgroundColor != 'grey'){
+    while(document.getElementById("peca"+col+row2)){
+      document.getElementById("peca"+col+row2).style.backgroundColor = 'grey';
+      row2++;
+      tabCol[col-1] = row-1;
     }
+    primeiro=1;
+  }
+  var aux=0;
+  for(i=0; i<(tabSize+2); i++){
+    aux += tabCol[i];
+  }
+  if(aux==0)
+    alert('you won');
 }
 
 function setSize(tam){
@@ -96,6 +107,7 @@ function tableMaker(tam){
           coluna.appendChild(interval);
         }
       }
+      tabCol = [1,2,3];
       break;
 
     case 2:
@@ -112,6 +124,7 @@ function tableMaker(tam){
           coluna.appendChild(interval);
         }
       }
+      tabCol = [1,2,3,4];
       break;
 
     case 3:
@@ -128,9 +141,15 @@ function tableMaker(tam){
           coluna.appendChild(interval);
         }
       }
+      tabCol = [1,2,3,4,5];
       break;
   }
+
+
 }
+
+
+
 
 for(var i = 0; i < 4; i++){
   rankinglocal[i] = [];
@@ -175,7 +194,7 @@ function loadrank(dif){
           var td = document.createElement('td');
           if(dificuldade[i]!=null){
             switch(j){
-              case 0: 
+              case 0:
                 td.appendChild(document.createTextNode(dificuldade[i].name));
                 break;
               case 1:
