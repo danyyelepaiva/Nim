@@ -10,6 +10,8 @@ var i=1;
 window.onload = function(){
   hide("top");
   hide("menu");
+  hide("fim");
+  hide("fim2");
 };
 
 function hide(eid){
@@ -35,22 +37,30 @@ function gerente(){
 }
 
 function jogada(){
-  var coluna = Math.floor(Math.random()*(tabSize+3));
-  if(tabCol[coluna]==0){
-    coluna = 0;
-    while(tabCol[coluna]==0){
+  var coluna = Math.floor(Math.random()*(tabSize+2)+1);
+  if(tabCol[coluna-1]==0){
+    coluna = 1;
+    while(tabCol[coluna-1]==0){
       coluna++;
     }
   }
   var linha = Math.floor(Math.random()*tabCol[coluna-1]+1);
   linha2 = linha;
   while(document.getElementById("peca"+coluna+linha2)){
-    alert("peca"+coluna+linha2);
     document.getElementById("peca"+coluna+linha2).style.backgroundColor = 'grey';
     linha2++;
     tabCol[coluna-1] = linha-1;
   }
-  primeiro=2;
+
+  var aux=0;
+  for(i=0; i<(tabSize+2); i++){
+    aux += tabCol[i];
+  }
+  if(aux==0){
+    hide('tabela');
+    show('fim2');
+    show("ranking");
+  }
 }
 
 function peca(col,row){
@@ -61,14 +71,16 @@ function peca(col,row){
       row2++;
       tabCol[col-1] = row-1;
     }
-    primeiro=1;
   }
   var aux=0;
   for(i=0; i<(tabSize+2); i++){
     aux += tabCol[i];
   }
-  if(aux==0)
-    alert('you won');
+  if(aux==0){
+    hide('tabela');
+    show('fim');
+    show("ranking");
+  }
 }
 
 function setSize(tam){
@@ -86,7 +98,7 @@ function startGame(){
 
 function tableMaker(tam){
   var tabela = document.createElement("div");
-  tabela.setAttribute("class", "tabela");
+  tabela.setAttribute("id", "tabela");
   document.body.appendChild(tabela);
   var coluna;
   var peca;
@@ -144,7 +156,11 @@ function tableMaker(tam){
       tabCol = [1,2,3,4,5];
       break;
   }
-
+  botao = document.createElement("input");
+  botao.setAttribute("type","button");
+  botao.setAttribute("value","computador");
+  botao.setAttribute("onclick","jogada()");
+  tabela.appendChild(botao);
 
 }
 
